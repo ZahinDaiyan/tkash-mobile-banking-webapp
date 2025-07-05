@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tkash | Register</title>
-    <link rel="stylesheet" href="styles/blog.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tkash | Register</title>
+  
+  <!-- External stylesheet for design -->
+  <link rel="stylesheet" href="styles/blog.css" />
 </head>
+
 <body>
-    
+  <!-- === Header Section with Navigation === -->
+  <header>
+    <h1>Tkash</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- === Page Title === -->
+    <h2 style="text-align: center; margin-bottom: 30px;">Register</h2>
+
+    <!-- === Registration Form Card === -->
+    <section class="register-section">
+      <form id="registerForm" class="form-container">
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <!-- Email Address -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Mobile Number -->
+        <label for="contactNo">Mobile Number:</label>
+        <input type="tel" id="contactNo" name="contactNo" required />
+
+        <!-- Mobile Operator (Radio Buttons) -->
+        <fieldset class="radio-group">
+          <legend>Mobile Operator:</legend>
+          <label><input type="radio" name="operator" value="grameenphone" required> Grameenphone</label>
+          <label><input type="radio" name="operator" value="banglalink"> Banglalink</label>
+          <label><input type="radio" name="operator" value="airtel"> Airtel</label>
+          <label><input type="radio" name="operator" value="teletalk"> Teletalk</label>
+        </fieldset>
+
+        <!-- Account Type (Radio Buttons) -->
+        <fieldset class="radio-group">
+          <legend>Account Type:</legend>
+          <label><input type="radio" name="accountType" value="saving" required> Saving</label>
+          <label><input type="radio" name="accountType" value="fixed"> Fixed</label>
+          <label><input type="radio" name="accountType" value="both"> Both</label>
+        </fieldset>
+
+        <!-- Create PIN -->
+        <label for="pin">Create PIN:</label>
+        <input type="password" id="pin" name="pin" maxlength="4" minlength="4" required />
+
+        <!-- Confirm PIN -->
+        <label for="confirmPin">Confirm PIN:</label>
+        <input type="password" id="confirmPin" name="confirmPin" maxlength="4" minlength="4" required />
+
+        <!-- Submit Button (Centered with ID for specific styling) -->
+        <button type="submit" id="reg-form-btn" class="form-btn">Confirm Registration</button>
+      </form>
+    </section>
+
+   <p class="have-account">
+    Already have an account? <a href="login.html">Log In</a>
+</p>
+
+  </main>
+
+  <!-- === Footer === -->
+  <footer>
+    <p>© 2025 Tkash. All rights reserved.</p>
+  </footer>
+
+  <!-- === JavaScript (validation or behavior) === -->
+  <script src="scripts/main.js"></script>
 </body>
+
 </html>

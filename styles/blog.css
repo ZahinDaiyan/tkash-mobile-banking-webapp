@@ -1,60 +1,69 @@
+/* Reset default margin, padding and set box-sizing for easier sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling: font, background color, text color, line height, and padding */
 body {
     font-family: Arial, sans-serif;
-    background-color: #003366;
-    color: #f9f9f9;
+    background-color: #003366; /* Dark blue background */
+    color: #f9f9f9; /* Light text color */
     line-height: 1.6;
     padding: 20px;
 }
 
-/* ===== Header & Nav ===== */
+/* ===== Header & Navigation ===== */
 header {
     text-align: center;
     padding: 20px 0;
     margin-bottom: 30px;
+    /* Slight shadow for separation */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation bar uses flexbox for horizontal layout */
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* space between nav links */
 }
 
+/* Navigation links styling */
 nav a {
     text-decoration: none;
-    color: #f9f9f9;
+    color: #f9f9f9; /* white-ish */
     font-weight: bold;
 }
 
+/* Navigation link hover effect */
 nav a:hover {
-    color: rgb(181, 193, 244);
+    color: rgb(181, 193, 244); /* lighter blue */
     text-decoration: underline;
 }
 
-/* ===== Card Sections ===== */
+/* ===== Card Sections (For content sections with image & text) ===== */
 .card {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    display: flex;               /* layout children horizontally */
+    align-items: center;         /* vertically center */
+    gap: 30px;                   /* spacing between image and text */
     margin-bottom: 50px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;             /* wrap on smaller screens */
 }
 
+/* Text content inside card takes flexible width with minimum 400px */
 .card .text-content {
     flex: 1 1 400px;
 }
 
+/* Image container also flexible with minimum width */
 .card .image-content {
     flex: 1 1 400px;
     text-align: center;
 }
 
+/* Images responsive with rounded corners and subtle shadow */
 .card .image-content img {
     max-width: 100%;
     height: auto;
@@ -62,55 +71,171 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Reverse layout for alternate card (image left, text right) */
 .card.reverse {
     flex-direction: row-reverse;
 }
 
-/* ===== CTA Section ===== */
+/* ===== Call To Action (CTA) Section ===== */
 .cta {
     text-align: center;
-    background-color: #002244;
+    background-color: #002244;  /* Darker blue */
     padding: 40px 20px;
     margin: 50px auto;
     border-radius: 20px;
+    /* Light transparent shadow for subtle elevation */
     box-shadow: 0 4px 12px rgba(240, 236, 236, 0.2);
 }
 
+/* CTA Heading styling */
 .cta h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: rgb(254, 242, 242);
+    color: rgb(254, 242, 242); /* Soft off-white */
 }
 
+/* CTA paragraph styling */
 .cta p {
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: rgb(254, 242, 242);
 }
 
+/* Container for CTA buttons aligned horizontally */
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* wrap on smaller screens */
 }
 
-/* ===== Buttons ===== */
+/* ===== Button Styles ===== */
+/* Common styling for primary and secondary buttons */
 .btn-primary,
 .btn-secondary {
     padding: 20px 24px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
-    border: 2px solid #fefefe;
+    border: 2px solid #fefefe; /* white border */
     background-color: transparent;
     color: rgb(254, 242, 242);
     transition: all 0.3s ease;
 }
 
+/* Hover effect for buttons */
 .btn-primary:hover,
 .btn-secondary:hover {
-    background-color: #fefefe;
-    color: #003366;
+    background-color: #fefefe; /* white background on hover */
+    color: #003366;             /* dark blue text on hover */
     cursor: pointer;
 }
+
+/* ===== Registration Form Styles ===== */
+
+/* Container styling for the registration form */
+.form-container {
+  background-color: #e6f0ff; /* soft light blue */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* wider than before */
+  margin: 0 auto;
+  color: #003366; /* dark blue text for contrast */
+  border: 1.5px solid #003366; /* keeps the accent color */
+}
+
+
+/* Labels and fieldset legends share styling */
+form label,
+.radio-group legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Color inherited from .form-container for consistency */
+}
+
+/* Remove default border and padding from radio groups */
+.radio-group {
+    margin-bottom: 20px;
+    border: none;
+    padding: 0;
+}
+
+/* Style radio buttons labels */
+.radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Link for "Already have an account" */
+.have-account {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.have-account a {
+    color: #f9f9f9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.have-account a:hover {
+    text-decoration: underline;
+    color: #002244;
+}
+
+
+/* Input fields styling inside the registration form */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="password"] {
+    width: 100%;                /* full width */
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #003366;             /* text color */
+    background-color: #fff;     /* white background */
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Focus state for inputs: highlight border and subtle shadow */
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
+}
+
+/* Style for submit button container to center the button */
+.form-btn {
+    display: block;
+    margin: 20px auto 0 auto; /* center horizontally with top margin */
+}
+
+/* Specific styling for registration submit button */
+#reg-form-btn {
+    background-color: #f9f9f9;
+    color: #003366;
+    border: 2px solid #f9f9f9;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#reg-form-btn:hover {
+    background-color: #003366;
+    color: #f9f9f9;
+    border: 2px solid #f9f9f9;
+}
+

@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKash| Log in</title>
-    <link rel="stylesheet" href="styles/blog.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TKash | Log In</title>
+  <link rel="stylesheet" href="styles/blog.css" />
 </head>
+
 <body>
-    
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Main Login Form Section -->
+  <main>
+    <section class="login-form-container">
+      <h2>Log In</h2>
+
+      <form id="loginform">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter Your Email"
+        />
+
+        <input
+          type="password"
+          name="pin"
+          id="pin"
+          required
+          placeholder="Enter Your PIN"
+          maxlength="4"
+          minlength="4"
+        />
+
+        <button
+          type="submit"
+          id="login-btn"
+          class="btn-primary login-btn"
+        >
+          Log In
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Tkash. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/main.js"></script>
 </body>
+
 </html>
