@@ -130,7 +130,6 @@ nav a:hover {
     font-weight: bold;
     border-radius: 6px;
     border: 2px solid #fefefe;
-    /* white border */
     background-color: #003366;
     color: rgb(254, 242, 242);
     transition: all 0.3s ease;
@@ -140,9 +139,7 @@ nav a:hover {
 .btn-primary:hover,
 .btn-secondary:hover {
     background-color: #fefefe;
-    /* white background on hover */
     color: #003366;
-    /* dark blue text on hover */
     cursor: pointer;
 }
 
@@ -151,30 +148,23 @@ nav a:hover {
 /* Container styling for the registration form */
 .form-container {
     background-color: #002244;
-    /* soft light blue */
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    /* wider than before */
     margin: 0 auto;
     color: #f9f9f9;
-    /* dark blue text for contrast */
     border: 1.5px solid #003366;
-    /* keeps the accent color */
 }
 
 
-/* Labels and fieldset legends share styling */
 form label,
 .radio-group legend {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    /* Color inherited from .form-container for consistency */
 }
 
-/* Remove default border and padding from radio groups */
 .radio-group {
     margin-bottom: 20px;
     border: none;
@@ -202,8 +192,7 @@ form label,
 }
 
 .have-account a:hover {
-    text-decoration: underline;
-    color: #002244;
+    color: #318aff;
 }
 
 
@@ -213,21 +202,17 @@ form label,
 .form-container input[type="tel"],
 .form-container input[type="password"] {
     width: 100%;
-    /* full width */
     padding: 10px 12px;
     margin-bottom: 20px;
     border: 1.5px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
     color: #003366;
-    /* text color */
     background-color: #fff;
-    /* white background */
     transition: border-color 0.3s ease;
     box-sizing: border-box;
 }
 
-/* Focus state for inputs: highlight border and subtle shadow */
 .form-container input[type="text"]:focus,
 .form-container input[type="email"]:focus,
 .form-container input[type="tel"]:focus,
@@ -237,11 +222,9 @@ form label,
     box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
 }
 
-/* Style for submit button container to center the button */
 .form-btn {
     display: block;
     margin: 20px auto 0 auto;
-    /* center horizontally with top margin */
 }
 
 /* Specific styling for registration submit button */
@@ -265,41 +248,38 @@ form label,
 /* Login Form Container */
 .login-form-container {
     background-color: #002244;   
-    color: #f9f9f9;   /* off-white card */
-    max-width: 400px;               /* compact width */
-    margin: 40px auto;              /* centered horizontally with margin top & bottom */
-    padding: 30px 25px;             /* comfortable padding */
-    border-radius: 12px;            /* rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    color: #f9f9f9;  
+    max-width: 400px;               
+    margin: 40px auto;              
+    padding: 30px 25px;           
+    border-radius: 12px;          
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     box-sizing: border-box;
 }
 
-/* Input Fields inside the login form */
 .login-form-container input[type="email"],
 .login-form-container input[type="password"] {
-    width: 100%;                   /* full width */
-    padding: 12px 15px;            /* vertical and horizontal padding */
-    margin-bottom: 20px;           /* spacing between inputs */
+    width: 100%;                
+    padding: 12px 15px;            
+    margin-bottom: 20px;          
     font-size: 1rem;
-    border: 1.5px solid #ccc;      /* subtle border */
-    border-radius: 6px;            /* slightly rounded */
+    border: 1.5px solid #ccc;     
+    border-radius: 6px;            
     color: #f9f9f9;
     background-color: #fff;
     transition: border-color 0.3s ease;
 }
-
 .login-form-container input[type="email"]:focus,
 .login-form-container input[type="password"]:focus {
     border-color: #003366;         /* highlight border on focus */
     outline: none;
     box-shadow: 0 0 6px rgba(0, 51, 102, 0.5);
 }
-
 /* Login Button */
 .login-btn {
-    display: block;                /* takes full width */
+    display: block;                
     width: 100%;
-    padding: 14px 0;               /* vertical padding */
+    padding: 14px 0;              
     background-color: #003366;
     color: #f9f9f9;
     font-weight: bold;
@@ -308,22 +288,18 @@ form label,
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
-
 .login-btn:hover {
-    background-color: #002244;
-    color: #f9f9f9;
+    box-shadow: 5px 5px 0.5 rgba(0,0,0,0.5);
+    color: #1856d1;
 }
-
-/* Optional: Center the h2 heading */
 .login-form-container h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #fff;
 }
-
 footer {
     text-align: center;
-    margin-top: 20px    ;
-
+    margin-top: 20px;
 }
